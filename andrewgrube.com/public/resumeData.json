@@ -1,0 +1,121 @@
+{
+  "main": {
+    "name":"Andrew Grube",
+    "occupation":"DevOps Engineer",
+    "description":"AWS Certified Solutions Architect - Associate with 6 years of experience in IT, and 3 years experience in AWS technologies. In-depth experience with high availability, cost-effective, fault-tolerant systems.",
+    "image":"profilepic.jpg",
+    "bio":"AWS Certified Solutions Architect - Associate with 6 years of experience in IT, and 3 years experience in AWS technologies. In-depth experience with high availability, cost-effective, fault-tolerant systems.",
+    "contactmessage":"Feel free to send me an e-mail.",
+    "email": "andrewmgrube@gmail.com",
+    "phone": "(913) 375-4353",
+    "address":{
+      "street":"1736 S 32nd Street",
+      "city":"Kansas City",
+      "state":"Kansas",
+      "zip": "66106"
+    },
+    "website": "http://www.andrewgrube.com",
+    "resumedownload":"https://andrewgrube.com/files/resume.pdf",
+    "social":[
+      {
+        "name":"twitter",
+        "url":"http://twitter.com/GhostCodeKC",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/andrew-grube-74124821/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"http://instagram.com/GhostCodeKC",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/GhostCodeKC",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "education":[
+      {
+        "school":"Johnson County Community College",
+        "degree":"Computer Information Systems",
+        "graduated":"August 2008 - August 2012",
+        "description":""
+      },
+      {
+        "school":"AWS Certified Solutions Architect - Associate",
+        "degree":"CSAA Certificate",
+        "graduated":"September 21, 2018 - September 22, 2020",
+        "description":""
+      }
+    ],
+    "work":[
+      {
+        "company":"Data Systems International Inc.",
+        "title":[
+          ["DevOps Engineer"], 
+          ["Cloud Engineer"], 
+          ["Cloud Systems Administrator"], 
+          ["Customer Success Consultant I/II"]
+        ],
+        "years":[
+          ["November 2019 - Present"], 
+          ["November 2017 - October 2019"],
+          ["November 2017 - October 2019"],
+          ["October 2014 - August 2018"]
+        ],
+        "item": [
+          [
+            ["Created Lambda Function in Python 3.8 to automatically block IP addresses scanning production AWS Classic ELB."]
+          ],
+          [
+            ["Developed Lambda functions to programmatically back up EBS volumes for mission critical servers nightly and reduce cost bydeleting old backups on a revolving schedule."],
+            ["Created and deployed scalable CloudFormation application stack for infinite scaling of new software deployments"],
+            ["Worked with SCPaaS team for infrastructure review, DevOps strategy, and deploying test environments with Terraform"],
+            ["Worked with CloudInventory team to deploy and manage API cluster for new application functionality."],
+            ["Lead and developed weekly CloudOperations Success Through Synergy discussion to share information and increase knowledge of our AWS architecture and applications."]
+          ],
+          [
+            ["Creating and deploying VPC, security, and application CloudFormation stacks in 5 regions for 2 software stacks."],
+            ["Facilitated the implementation of production, stage, and test server monitoring in Grafana by communicating objectives to teams, and departments, coordinating timelines to ensuresuccessful launch."],
+            ["Lead the CI/CD efforts of our “customer portal” application in ECS with full CodePipeline integration and stored source in Git."],
+            ["Fulfilled administrative duties, including: production server monitoring, creating production server alerting mechanisms, cost reduction plans, constant review of CIS security compliance guidelines"]
+          ],
+          [
+            ["Resolving client and consultant issues with DSI supported software and hardware."], 
+            ["Creating distribution media and ship systems software to clients."],
+            ["Resolving client and consultant issues with DSI supported software and hardware."]
+          ]
+        ]
+      }
+    ],
+    "skills":[]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Canadian Wanderlust",
+        "category":"Personal Website & Blog",
+        "image":"resume-website.jpg",
+        "url":"https://www.andrewgrube.com"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "user":"Kareem Abdul Jabbar"
+      },
+      {
+        "text":"That Andrew Grube must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
+        "user":"Steve Wozniak... impersonator"
+      }
+    ]
+  }
+}
