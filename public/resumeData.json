@@ -65,8 +65,8 @@
         ],
         "years":[
           ["November 2019 - Present"], 
-          ["November 2017 - October 2019"],
-          ["November 2017 - October 2019"],
+          ["March 2019 - November 2019"],
+          ["August 2018 - March 2019"],
           ["October 2014 - August 2018"]
         ],
         "item": [
@@ -75,8 +75,8 @@
           ],
           [
             ["Developed Lambda functions to programmatically back up EBS volumes for mission critical servers nightly and reduce cost bydeleting old backups on a revolving schedule."],
-            ["Created and deployed scalable CloudFormation application stack for infinite scaling of new software deployments"],
-            ["Worked with SCPaaS team for infrastructure review, DevOps strategy, and deploying test environments with Terraform"],
+            ["Created and deployed scalable CloudFormation application stack for infinite scaling of new software deployments."],
+            ["Worked with SCPaaS team for infrastructure review, DevOps strategy, and deploying test environments with Terraform."],
             ["Worked with CloudInventory team to deploy and manage API cluster for new application functionality."],
             ["Lead and developed weekly CloudOperations Success Through Synergy discussion to share information and increase knowledge of our AWS architecture and applications."]
           ],
@@ -84,12 +84,13 @@
             ["Creating and deploying VPC, security, and application CloudFormation stacks in 5 regions for 2 software stacks."],
             ["Facilitated the implementation of production, stage, and test server monitoring in Grafana by communicating objectives to teams, and departments, coordinating timelines to ensuresuccessful launch."],
             ["Lead the CI/CD efforts of our “customer portal” application in ECS with full CodePipeline integration and stored source in Git."],
-            ["Fulfilled administrative duties, including: production server monitoring, creating production server alerting mechanisms, cost reduction plans, constant review of CIS security compliance guidelines"]
+            ["Fulfilled administrative duties, including: production server monitoring, creating production server alerting mechanisms, cost reduction plans, constant review of CIS security compliance guidelines."]
           ],
           [
             ["Resolving client and consultant issues with DSI supported software and hardware."], 
             ["Creating distribution media and ship systems software to clients."],
-            ["Resolving client and consultant issues with DSI supported software and hardware."]
+            ["Maintaining an exceptional level of training and experience on all of our products; including new and revised software and hardware."],
+            ["Documenting issue resolutions, creating software defect reports and enhancement requests as appropriate."]
           ]
         ]
       }
