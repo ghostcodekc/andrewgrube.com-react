@@ -1,10 +1,10 @@
 {
   "main": {
     "name":"Andrew Grube",
-    "occupation":"DevOps Engineer",
-    "description":"AWS Certified Solutions Architect - Associate with 6 years of experience in IT, and 3 years experience in AWS technologies. In-depth experience with high availability, cost-effective, fault-tolerant systems.",
+    "occupation":"DevOps Engineer II",
+    "description":"AWS Certified Solutions Architect - Professional with 6 years of experience in IT, and 4 years experience in AWS technologies. In-depth experience with high availability, cost-effective, fault-tolerant systems.",
     "image":"profilepic.jpg",
-    "bio":"AWS Certified Solutions Architect - Associate with 6 years of experience in IT, and 3 years experience in AWS technologies. In-depth experience with high availability, cost-effective, fault-tolerant systems.",
+    "bio":"AWS Certified Solutions Architect - Professional with 6 years of experience in IT, and 4 years experience in AWS technologies. In-depth experience with high availability, cost-effective, fault-tolerant systems.",
     "contactmessage":"Feel free to send me an e-mail.",
     "email": "andrewmgrube@gmail.com",
     "phone": "(913) 375-4353",
@@ -45,16 +45,38 @@
         "school":"Johnson County Community College",
         "degree":"Computer Information Systems",
         "graduated":"August 2008 - August 2012",
-        "description":""
+        "description":"https://www.jccc.edu/"
+      },
+      {
+        "school":"AWS Certified Solutions Architect - Professional",
+        "degree":"CSAP Certificate",
+        "graduated":"May 7, 2021 - May 7, 2024",
+        "description":"https://www.credly.com/badges/57503cab-7a7b-4956-a553-e11b51f5114e"
       },
       {
         "school":"AWS Certified Solutions Architect - Associate",
         "degree":"CSAA Certificate",
-        "graduated":"September 21, 2018 - September 22, 2020",
-        "description":""
+        "graduated":"May 7, 2021 - May 7, 2024",
+        "description":"https://www.credly.com/earner/earned/badge/be3a9a6a-bacf-4493-89fb-21b6308e0f3e"
       }
     ],
     "work":[
+      {
+        "company":"SelectQuote",
+        "title":[
+          ["DevOps Engineer II"]
+        ],
+        "years":[
+          ["March 2021 - Present"]
+        ],
+        "item": [
+          [
+            ["Deployment of new Amazon ECS services for Population Health."],
+            ["Assisted the App Support team to improve a poorly performing Serverless function in AWS."],
+            ["Configured Bitbucket CI/CD pipeline for Serverless Python 3.6 Lambda deployment with imports that rely on native packages that aren’t included in AWS Lambda environments."]
+          ]
+        ]
+      },
       {
         "company":"Data Systems International Inc.",
         "title":[
@@ -64,14 +86,19 @@
           ["Customer Success Consultant I/II"]
         ],
         "years":[
-          ["November 2019 - Present"], 
+          ["November 2019 - March 2020"], 
           ["March 2019 - November 2019"],
           ["August 2018 - March 2019"],
           ["October 2014 - August 2018"]
         ],
         "item": [
           [
-            ["Created Lambda Function in Python 3.8 to automatically block IP addresses scanning production AWS Classic ELB."]
+            ["Created Lambda Function in Python 3.8 to automatically block IP addresses scanning production AWS Classic ELB."],
+            ["Developed an internal customer information website in Javascript using AWS Cognito, OneLogin SSO, AWS CodeCommit, and AWS Amplify"],
+            ["Architected extended data access model for customer."],
+            ["Performed penetration tests with Greenbone Networks open source software running in a Kali Linux VM."],
+            ["Installed and configured cloud based Jenkins server for DSI analytics developers."],
+            ["Configured and deployed AWS SSO connected by OneLogin with MFA"]
           ],
           [
             ["Developed Lambda functions to programmatically back up EBS volumes for mission critical servers nightly and reduce cost bydeleting old backups on a revolving schedule."],
@@ -88,7 +115,6 @@
           ],
           [
             ["Resolving client and consultant issues with DSI supported software and hardware."], 
-            ["Creating distribution media and ship systems software to clients."],
             ["Maintaining an exceptional level of training and experience on all of our products; including new and revised software and hardware."],
             ["Documenting issue resolutions, creating software defect reports and enhancement requests as appropriate."]
           ]
@@ -104,6 +130,12 @@
         "category":"Personal Website & Blog",
         "image":"resume-website.jpg",
         "url":"https://www.andrewgrube.com"
+      },
+      {
+        "title":"Dev.to Blog Post",
+        "category":"Blogpost",
+        "image":"dev.to-cw-blogpost.png",
+        "url":"https://daily.dev/posts/configuring-cloudwatch-logs-for-identifying-memory-leaks-on-windows-workloads-in-aws"
       }
     ]
   },
