@@ -64,6 +64,12 @@
         "degree":"Hashicorp Certificate",
         "graduated":"May 11, 2021 - May 11, 2023",
         "description":"https://www.credly.com/badges/69274e42-97bb-47ff-9d9f-ea38a8b011e8/public_url"
+      },
+      {
+        "school":"AWS Certified Cloud Practitioner",
+        "degree":"CCP Certificate",
+        "graduated":"May 13, 2021 - May 13, 2024",
+        "description":"https://www.credly.com/badges/6e24c9c6-bb9d-4d7c-baa9-c1f3927e24dc/public_url"
       }
     ],
     "work":[
