@@ -49,13 +49,13 @@
       },
       {
         "school":"AWS Certified Solutions Architect - Professional",
-        "degree":"CSAP Certificate",
+        "degree":"SAP Certificate",
         "graduated":"May 7, 2021 - May 7, 2024",
         "description":"https://www.credly.com/badges/57503cab-7a7b-4956-a553-e11b51f5114e/public_url"
       },
       {
         "school":"AWS Certified Solutions Architect - Associate",
-        "degree":"CSAA Certificate",
+        "degree":"SAA Certificate",
         "graduated":"May 7, 2021 - May 7, 2024",
         "description":"https://www.credly.com/badges/be3a9a6a-bacf-4493-89fb-21b6308e0f3e/public_url"
       },
@@ -67,7 +67,7 @@
       },
       {
         "school":"AWS Certified Cloud Practitioner",
-        "degree":"CCP Certificate",
+        "degree":"CLF Certificate",
         "graduated":"May 13, 2021 - May 13, 2024",
         "description":"https://www.credly.com/badges/6e24c9c6-bb9d-4d7c-baa9-c1f3927e24dc/public_url"
       }
