@@ -1,0 +1,15 @@
+{
+    "main": {
+      "blogs": [
+          {
+            "title":"Coming Soon",
+            "headerImg": "https://via.placeholder.com/300"
+          },
+          {
+            "title":"Coming Soon #2",
+            "headerImg": "https://via.placeholder.com/300"
+          }
+        ]
+    }
+}
+  
