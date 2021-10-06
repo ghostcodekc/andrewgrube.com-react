@@ -9,10 +9,10 @@
     "email": "andrewmgrube@gmail.com",
     "phone": "(913) 375-4353",
     "address":{
-      "street":"1736 S 32nd Street",
-      "city":"Kansas City",
-      "state":"Kansas",
-      "zip": "66106"
+      "street":"",
+      "city":"",
+      "state":"",
+      "zip": ""
     },
     "website": "http://www.andrewgrube.com",
     "resumedownload":"https://andrewgrube.com/files/resume.pdf",
@@ -85,7 +85,9 @@
           [
             ["Deployment of new Amazon ECS services for Population Health."],
             ["Assisted the App Support team to improve a poorly performing Serverless function in AWS."],
-            ["Configured Bitbucket CI/CD pipeline for Serverless Python 3.6 Lambda deployment with imports that rely on native packages that aren’t included in AWS Lambda environments."]
+            ["Configured Bitbucket CI/CD pipeline for Serverless Python 3.6 Lambda deployment with imports that rely on native packages that aren’t included in AWS Lambda environments."],
+            ["Created an AWS QuickSight group manager integrated with Google SSO developed  in Python. This application stack is running on Lambda and deployed with Serverless framework and automated with BitBucket pipelines."],
+            ["Documented and deployed infrastructure of the new disaster recovery environment in Terraform using best practices and automating documentation with terraform-docs using pre-commit githooks."]
           ]
         ]
       },
