@@ -1,7 +1,7 @@
 {
   "main": {
     "name": "Andrew Grube",
-    "occupation": "DevOps Engineer II",
+    "occupation": "Site Reliability Engineer",
     "description": "AWS Certified Solutions Architect - Professional with 6 years of experience in IT, and 4 years experience in AWS technologies. In-depth experience with high availability, cost-effective, fault-tolerant systems.",
     "image": "profile.png",
     "bio": "AWS Certified Solutions Architect - Professional with 6 years of experience in IT, and 4 years experience in AWS technologies. In-depth experience with high availability, cost-effective, fault-tolerant systems.",
@@ -74,9 +74,21 @@
     ],
     "work": [
       {
+        "company": "Shamrock Trading Corporation",
+        "title": [["Site Reliability Engineer"]],
+        "years": [["November 2021 - Present"]],
+        "item": [
+          [
+            [
+              "Developed Serverless Application Model (SAM) template for private internal API."
+            ]
+          ]
+        ]
+      },
+      {
         "company": "SelectQuote",
         "title": [["DevOps Engineer II"]],
-        "years": [["March 2021 - Present"]],
+        "years": [["March 2021 - November 2021"]],
         "item": [
           [
             ["Deployment of new Amazon ECS services for Population Health."],
