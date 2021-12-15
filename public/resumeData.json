@@ -15,7 +15,7 @@
       "zip": "66213"
     },
     "website": "http://www.andrewgrube.com",
-    "resumedownload": "https://andrewgrube.com/files/resume.pdf",
+    "resumedownload": "https://docs.google.com/document/d/1Y169Q3juoq1KNb8eb-gylYwQkpsp92uos6u2aeqOU4M/edit?usp=sharing",
     "social": [
       {
         "name": "twitter",
@@ -48,10 +48,10 @@
         "description": "https://www.jccc.edu/"
       },
       {
-        "school": "AWS Certified Solutions Architect - Professional",
-        "degree": "SAP Certificate",
-        "graduated": "May 7, 2021 - May 7, 2024",
-        "description": "https://www.credly.com/badges/57503cab-7a7b-4956-a553-e11b51f5114e/public_url"
+        "school": "AWS Certified Cloud Practitioner",
+        "degree": "CLF Certificate",
+        "graduated": "May 13, 2021 - May 13, 2024",
+        "description": "https://www.credly.com/badges/6e24c9c6-bb9d-4d7c-baa9-c1f3927e24dc/public_url"
       },
       {
         "school": "AWS Certified Solutions Architect - Associate",
@@ -60,16 +60,16 @@
         "description": "https://www.credly.com/badges/be3a9a6a-bacf-4493-89fb-21b6308e0f3e/public_url"
       },
       {
+        "school": "AWS Certified Solutions Architect - Professional",
+        "degree": "SAP Certificate",
+        "graduated": "May 7, 2021 - May 7, 2024",
+        "description": "https://www.credly.com/badges/57503cab-7a7b-4956-a553-e11b51f5114e/public_url"
+      },
+      {
         "school": "HashiCorp Certified: Terraform Associate",
         "degree": "Hashicorp Certificate",
         "graduated": "May 11, 2021 - May 11, 2023",
         "description": "https://www.credly.com/badges/69274e42-97bb-47ff-9d9f-ea38a8b011e8/public_url"
-      },
-      {
-        "school": "AWS Certified Cloud Practitioner",
-        "degree": "CLF Certificate",
-        "graduated": "May 13, 2021 - May 13, 2024",
-        "description": "https://www.credly.com/badges/6e24c9c6-bb9d-4d7c-baa9-c1f3927e24dc/public_url"
       }
     ],
     "work": [
