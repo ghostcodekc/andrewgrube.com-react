@@ -81,6 +81,15 @@
           [
             [
               "Developed Serverless Application Model (SAM) template for private internal API."
+            ],
+            [
+              "Configured MongoDB clusters in development and production environment for high availability multi-region capabilities."
+            ],
+            [
+              "Tackled a new responsibility from the marketing department to handle redirects for vanity URLs to our supported marketing websites. The new solution saves the company thousands of dollars every year compared to what our marketing hosting provider was charging us."
+            ],
+            [
+              "Deployed, documented, and designed a fault tolerant, highly available, self healing, new CI/CD process for an API. This project used Terraform for the resource creation, GitHub Actions for the deployment methodology, and ECS / ECR for the service deployment."
             ]
           ]
         ]
