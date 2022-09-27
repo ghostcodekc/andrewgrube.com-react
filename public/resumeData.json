@@ -90,6 +90,22 @@
             ],
             [
               "Deployed, documented, and designed a fault tolerant, highly available, self healing, new CI/CD process for an API. This project used Terraform for the resource creation, GitHub Actions for the deployment methodology, and ECS / ECR for the service deployment."
+            ],
+            [
+              "Developed a solution for the ability to trigger post deployment scripts in GitHub Actions in all repositories with Terraform."
+            ],
+            [
+              "Migrated front end css library from Jenkins and Gerritt to GitHub and AWS CodePipeline. Collaborated with internal team on specific requirements for this package and delievered the project weeks ahead of proposed deadline."
+            ],
+            ["Completed MongoDB M001 Course on Mongo University."],
+            [
+              "Standardized CloudFormation nested templates for developers to consume in their serverless SAM templates. This increases time to deployment across all teams and decreases the load on the SRE team by providing a consumable template for common resources being deployed."
+            ],
+            [
+              "Assisted with development, deployment, and documentation of an AWS Route 53 health check solution deployed on an opt-in basis by developers for their applications and services."
+            ],
+            [
+              "Authored and updated over 30 Confluence Documents. This helped the SRE team become more organized and assisted with other internal teams by creating an FAQ section."
             ]
           ]
         ]
