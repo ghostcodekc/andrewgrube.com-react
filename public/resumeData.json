@@ -95,7 +95,7 @@
               "Developed a solution for the ability to trigger post deployment scripts in GitHub Actions in all repositories with Terraform."
             ],
             [
-              "Migrated front end css library from Jenkins and Gerritt to GitHub and AWS CodePipeline. Collaborated with internal team on specific requirements for this package and delievered the project weeks ahead of proposed deadline."
+              "Migrated front end css library from Jenkins and Gerritt to GitHub and AWS CodePipeline. Collaborated with internal team on specific requirements for this package and delivered the project weeks ahead of proposed deadline."
             ],
             ["Completed MongoDB M001 Course on Mongo University."],
             [
@@ -106,6 +106,15 @@
             ],
             [
               "Authored and updated over 30 Confluence Documents. This helped the SRE team become more organized and assisted with other internal teams by creating an FAQ section."
+            ],
+            [
+              "Updated LetsEncrypt certificates on an EKS cluster for multiple pods."
+            ],
+            [
+              "Made a proof-of-concept procedure to upload NuGet and npm packages side by side in CodeArtifact."
+            ],
+            [
+              "Created and documented the process for enabling custom CORS configuration on S3 website buckets in Terraform."
             ]
           ]
         ]
