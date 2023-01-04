@@ -49,6 +49,11 @@ class Header extends Component {
                 Portfolio
               </a>
             </li>
+            <li>
+              <a className="smoothscroll" href="https://blog.andrewgrube.com">
+                Blog
+              </a>
+            </li>
             {/* <li><a href="/blog">Blog</a></li> */}
           </ul>
         </nav>
