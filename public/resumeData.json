@@ -108,13 +108,19 @@
               "Authored and updated over 30 Confluence Documents. This helped the SRE team become more organized and assisted with other internal teams by creating an FAQ section."
             ],
             [
-              "Updated LetsEncrypt certificates on an EKS cluster for multiple pods."
+              "Documented, investigated, and executed process for updating LetsEncrypt certificates on an EKS cluster for multiple pods."
             ],
             [
               "Made a proof-of-concept procedure to upload NuGet and npm packages side by side in CodeArtifact."
             ],
             [
               "Created and documented the process for enabling custom CORS configuration on S3 website buckets in Terraform."
+            ],
+            [
+              "Implemented bi-directional cross region replication across two regions, successfully replicating over 700,000 objects across two sets of buckets for continual disaster recovery preparedness."
+            ],
+            [
+              "Led the monitoring project with the SRE team, deploying infrastructure, creating JIRA tickets, and setting attainable goals for the team."
             ]
           ]
         ]
