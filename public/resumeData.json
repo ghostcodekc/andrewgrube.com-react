@@ -75,7 +75,7 @@
     "work": [
       {
         "company": "Shamrock Trading Corporation",
-        "title": [["Site Reliability Engineer"]],
+        "title": [["Site Reliability Engineer II"]],
         "years": [["November 2021 - Present"]],
         "item": [
           [
@@ -121,6 +121,12 @@
             ],
             [
               "Led the monitoring project with the SRE team, deploying infrastructure, creating JIRA tickets, and setting attainable goals for the team."
+            ],
+            [
+              "Created a python service that programmatically generates dashboards based on team specific criteria, and pushes those dashboards to Grafana."
+            ],
+            [
+              "Created a python service that manages the creation, updating, and deletion of Grafana users."
             ]
           ]
         ]
