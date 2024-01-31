@@ -127,6 +127,15 @@
             ],
             [
               "Created a python service that manages the creation, updating, and deletion of Grafana users."
+            ],
+            [
+              "Enhanced the security posture of the company's web applications by strategically implementing and configuring essential HTTP security headers across all CloudFront website distributions."
+            ],
+            [
+              "Utilized Terraform to create multiple EventBridge resources for development teams to use to accelerate the adoption of event-driven patterns."
+            ],
+            [ 
+              "Enhanced our existing pipeline capabilities by architecting a streamlined process for containerized Lambda deployments."
             ]
           ]
         ]
