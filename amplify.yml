@@ -7,7 +7,7 @@ frontend:
     preBuild:
       commands:
         - rm -rf node_modules
-        - npm ci --include=dev
+        - npm ci
     build:
       commands:
         - npm run build
@@ -16,4 +16,5 @@ frontend:
     files:
       - '**/*'
   cache:
-    paths: []
+    paths:
+      - node_modules/**/*
