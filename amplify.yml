@@ -6,10 +6,8 @@ frontend:
   phases:
     preBuild:
       commands:
-        - rm -rf .next/cache
-        - rm -rf .npm
         - rm -rf node_modules
-        - npm ci
+        - npm ci --verbose
     build:
       commands:
         - npm run build
