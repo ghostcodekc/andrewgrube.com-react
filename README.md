@@ -1,4 +1,5 @@
 # andrewgrube.com-react
  
 `npm i`
-`npm run start`
+
+`npm run dev`
