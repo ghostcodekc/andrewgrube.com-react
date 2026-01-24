@@ -19,6 +19,6 @@ frontend:
     paths:
       - node_modules/**/*
   redirects:
-    - source: '/<^.+\.[a-zA-Z0-9]{1,}$|^(?!.*\.)/'
+    - source: '/<^[^.]+$|\.(?!webp|png|jpg|jpeg|gif|svg|css|js|json|ico|woff|woff2|ttf|eot)$/'
       target: /index.html
       status: 200
