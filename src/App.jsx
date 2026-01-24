@@ -1,10 +1,20 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import Home from './pages/Home';
-import Resume from './pages/Resume';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
 import { useData } from './useData';
+
+// Lazy load page components
+const Home = lazy(() => import('./pages/Home'));
+const Resume = lazy(() => import('./pages/Resume'));
+const Projects = lazy(() => import('./pages/Projects'));
+const Contact = lazy(() => import('./pages/Contact'));
+
+// Loading fallback component
+const PageLoader = () => (
+  <div className="flex items-center justify-center">
+    <div className="text-gray-400">Loading...</div>
+  </div>
+);
 
 function App() {
   const { data, loading } = useData();
@@ -20,12 +30,14 @@ function App() {
   return (
     <Router>
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home data={data} />} />
-          <Route path="/resume" element={<Resume data={data} />} />
-          <Route path="/projects" element={<Projects data={data} />} />
-          <Route path="/contact" element={<Contact data={data} />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Home data={data} />} />
+            <Route path="/resume" element={<Resume data={data} />} />
+            <Route path="/projects" element={<Projects data={data} />} />
+            <Route path="/contact" element={<Contact data={data} />} />
+          </Routes>
+        </Suspense>
       </Layout>
     </Router>
   );

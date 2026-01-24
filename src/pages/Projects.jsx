@@ -11,8 +11,8 @@ const Projects = ({ data }) => {
             rel="noopener noreferrer"
             className="group bg-gray-700/50 rounded-xl overflow-hidden hover:bg-gray-700 transition-all cursor-pointer"
           >
-            <div className="h-32 overflow-hidden">
-               <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+            <div className="h-40 sm:h-48 bg-gray-600 flex items-center justify-center">
+               <img src={project.image} alt={project.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"/>
             </div>
             <div className="p-4">
               <h3 className="font-bold text-white mb-1">{project.title}</h3>

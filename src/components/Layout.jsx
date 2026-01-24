@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
         </nav>
 
         {/* Content Area */}
-        <main className="flex-1 overflow-y-auto p-6 sm:p-10 flex flex-col items-center justify-center">
+        <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 sm:p-10 flex flex-col items-center justify-start w-full">
           {children}
         </main>
 
