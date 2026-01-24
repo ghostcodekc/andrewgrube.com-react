@@ -1,0 +1,72 @@
+{
+  "profile": {
+    "name": "Andrew Grube",
+    "title": "Senior Site Reliability Engineer",
+    "bio": "Kansas City based Senior Site Reliability & DevOps Engineer with 10+ years of experience specializing in high-availability AWS architecture, Infrastructure as Code (Terraform/CloudFormation), and automated CI/CD orchestration. Proven track record of driving significant cost savings and operational efficiency by migrating legacy systems to serverless/containerized environments and building developer self-service tools. Expert in designing multi-region disaster recovery strategies and enhancing security postures across complex, mission-critical cloud ecosystems.",
+    "avatar": "headshot.jpg",
+    "socials": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/ghostcodekc"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/andrew-grube-%E2%98%81%EF%B8%8F-74124821/"
+      }
+    ]
+  },
+  "resume": [
+    {
+      "id": 1,
+      "role": "Senior SRE",
+      "company": "Shamrock Trading Corporation",
+      "period": "2021 - Present",
+      "description": "Led cross-functional SRE initiatives including a comprehensive monitoring overhaul and a high-scale S3 cross-region replication project for disaster recovery. Delivered substantial cost savings by migrating legacy hosting services to internal serverless solutions and accelerated development cycles by implementing standardized EventBridge and containerized Lambda deployment patterns."
+    },
+    {
+      "id": 2,
+      "role": "DevOps Engineer II",
+      "company": "SelectQuote",
+      "period": "2021 - 2021",
+      "description": "Engineered scalable Infrastructure as Code (IaC) solutions using Terraform to establish a robust Disaster Recovery environment with automated documentation. Developed custom serverless tooling in Python to integrate AWS QuickSight with Google SSO and orchestrated complex Bitbucket CI/CD pipelines for Lambda functions requiring native dependency management."
+    },
+    {
+      "id": 3,
+      "role": "DevOps Engineer",
+      "company": "Data Systems International Inc.",
+      "period": "2014 - 2021",
+      "description": "Architected and secured scalable AWS environments using Python and IaC tools, rising from an entry-level support role to DevOps Engineer through a series of rapid internal promotions. Key contributions include deploying serverless security measures, optimizing CI/CD pipelines for containerized applications, and driving significant operational cost reductions."
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Personal Blog",
+      "description": "A blog for sharing technical insights and experiences.",
+      "image": "/blog.png",
+      "url": "https://blog.andrewgrube.com"
+    },
+    {
+      "id": 2,
+      "title": "Home Calculator App",
+      "description": "Web Application for custom home calculations based on specific user preferences.",
+      "image": "/home-calc.png",
+      "url": "https://home-calc.andrewgrube.com/"
+    },
+    {
+      "id": 3,
+      "title": "DIG Website",
+      "description": "Website for non profit DIG (Dogpark Improvement Group).",
+      "image": "/dig_website.png",
+      "url": "https://digpennvalley.org/#/"
+    },
+    {
+      "id": 4,
+      "title": "Personal Photography Website",
+      "description": "Website for my personal photography.",
+      "image": "/photography_website.jpg",
+      "url": "https://photo.andrewgrube.com/"
+    }
+  ],
+  "contactLink": "https://docs.google.com/forms/d/e/1FAIpQLSfrYzfUetM09EFitnxc7cwBNsw9UKiwHgsJToxXAjFjXua2HA/viewform?usp=header"
+}
