@@ -19,8 +19,6 @@ frontend:
     paths:
       - node_modules/**/*
   redirects:
-    - source: '</^[^.]+$|\.(?!webp|png|jpg|jpeg|gif|svg|css|js|json|ico|webmanifest)$/'
+    - source: '/<^.+\.[a-zA-Z0-9]{1,}$|^(?!.*\.)/'
       target: /index.html
       status: 200
-      queryParameters:
-        - ''
