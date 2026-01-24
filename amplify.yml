@@ -9,7 +9,7 @@ frontend:
         - rm -rf .next/cache
         - rm -rf .npm
         - rm -rf node_modules
-        - npm install
+        - npm ci
     build:
       commands:
         - npm run build
