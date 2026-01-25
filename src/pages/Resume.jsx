@@ -11,6 +11,16 @@ const Resume = ({ data }) => {
             <p className="text-gray-400 text-sm">{job.description}</p>
           </div>
         ))}
+        <div className="flex flex-col items-center justify-center text-center space-y-6 h-full py-10 animate-fade-in">
+      <a 
+        href={data.resumeLink} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-full shadow-lg hover:shadow-blue-500/30 transition-all transform hover:-translate-y-1"
+      >
+        Get full resume
+      </a>
+    </div>
       </div>
     </div>
   );
