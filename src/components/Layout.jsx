@@ -11,36 +11,41 @@ const Layout = ({ children }) => {
   ];
 
   return (
-    <div className="h-screen flex items-center justify-center p-4 sm:p-6">
-      <div className="w-full max-w-2xl h-[90vh] bg-gray-800/80 backdrop-blur-md border border-gray-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in">
-        
-        {/* Navigation Bar */}
-        <nav className="flex justify-center space-x-4 sm:space-x-8 p-6 border-b border-gray-700 flex-shrink-0">
+    <div className="min-h-screen relative flex flex-col items-center">
+      {/* Background Pattern */}
+      <div className="fixed inset-0 bg-grid -z-10 opacity-50 pointer-events-none" />
+      <div className="fixed inset-0 bg-gradient-to-tr from-zinc-900 via-zinc-900 to-emerald-800/20 -z-20 pointer-events-none" />
+
+      {/* Floating Navigation */}
+      <nav className="fixed top-6 z-50 px-4">
+        <div className="glass px-1.5 py-1.5 rounded-full flex items-center space-x-1 sm:space-x-2 bg-zinc-800/80">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
-              className={`text-sm sm:text-base font-medium transition-colors duration-200 ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 location.pathname === item.path
-                  ? 'text-blue-400 border-b-2 border-blue-400 pb-1'
-                  : 'text-gray-400 hover:text-white pb-1'
+                  ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shadow-lg shadow-emerald-500/10'
+                  : 'text-zinc-300 hover:text-white hover:bg-zinc-700'
               }`}
             >
               {item.name}
             </Link>
           ))}
-        </nav>
+        </div>
+      </nav>
 
-        {/* Content Area */}
-        <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 sm:p-10 flex flex-col items-center justify-start w-full">
+      {/* Main Content Area */}
+      <main className="w-full max-w-4xl px-6 pt-32 pb-20 flex-1 flex flex-col items-center">
+        <div className="w-full animate-slide-up">
           {children}
-        </main>
+        </div>
+      </main>
 
-        {/* Footer */}
-        <footer className="p-4 text-center text-xs text-gray-500 border-t border-gray-700 flex-shrink-0">
-          © {new Date().getFullYear()} - Built with 💚 in Kansas City
-        </footer>
-      </div>
+      {/* Footer */}
+      <footer className="w-full py-8 text-center text-xs text-zinc-500 tracking-wider">
+        © {new Date().getFullYear()} - Built with 💚 in Kansas City
+      </footer>
     </div>
   );
 };

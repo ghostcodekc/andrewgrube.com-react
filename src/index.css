@@ -1,15 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  height: 100vh;
-  overflow: hidden;
+@layer base {
+  body {
+    @apply bg-zinc-900 text-zinc-100 font-sans antialiased selection:bg-emerald-500/30 selection:text-emerald-200;
+  }
 }
 
-body {
-  @apply bg-gray-900 text-gray-100 font-sans antialiased;
-  background-image: linear-gradient(to bottom right, #111827, #1f2937);
+@layer utilities {
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px);
+  }
+  
+  .glass {
+    @apply bg-zinc-800/50 backdrop-blur-md border border-zinc-700/50;
+  }
+}
+
+/* Base fade-in for all pages */
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
 }
