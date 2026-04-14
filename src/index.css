@@ -23,5 +23,45 @@
 
 /* Base fade-in for all pages */
 .animate-slide-up {
-  animation: slideUp 0.6s ease-out forwards;
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@property --ring-radius { syntax: '<number>'; inherits: true; initial-value: 0; }
+@property --ring-thickness { syntax: '<number>'; inherits: true; initial-value: 0; }
+@property --ring-x { syntax: '<number>'; inherits: true; initial-value: 50; }
+@property --ring-y { syntax: '<number>'; inherits: true; initial-value: 50; }
+@property --ring-interactive { syntax: '<number>'; inherits: true; initial-value: 0; }
+@property --particle-count { syntax: '<number>'; inherits: true; initial-value: 0; }
+@property --particle-rows { syntax: '<number>'; inherits: true; initial-value: 0; }
+@property --particle-size { syntax: '<number>'; inherits: true; initial-value: 0; }
+@property --particle-color { syntax: '<color>'; inherits: true; initial-value: white; }
+@property --particle-min-alpha { syntax: '<number>'; inherits: true; initial-value: 0; }
+@property --particle-max-alpha { syntax: '<number>'; inherits: true; initial-value: 1; }
+@property --fade-easing { syntax: '<string>'; inherits: true; initial-value: "ease-in-out"; }
+@property --seed { syntax: '<number>'; inherits: true; initial-value: 0; }
+@property --animation-tick { syntax: '<number>'; inherits: true; initial-value: 0; }
+
+@keyframes ring {
+    0% { --ring-radius: 120; }
+    100% { --ring-radius: 200; }
+}
+
+@keyframes ripple {
+    0% { --animation-tick: 0; }
+    100% { --animation-tick: 100; }
+}
+
+.ring-particles-bg {
+    --ring-radius: 80;
+    --ring-thickness: 600;
+    --particle-count: 60;
+    --particle-rows: 25;
+    --particle-size: 2;
+    --particle-color: rgba(16, 185, 129, 0.4); /* transparent emerald */
+    --particle-min-alpha: 0.1;
+    --particle-max-alpha: 0.8;
+    
+    background-image: paint(ring-particles);
+    animation: ripple 8s linear infinite, ring 8s ease-in-out infinite alternate;
+    transition: --ring-x 3s ease-out, --ring-y 3s ease-out;
 }

@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import AntigravityBackground from './AntigravityBackground';
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -11,10 +12,15 @@ const Layout = ({ children }) => {
   ];
 
   return (
-    <div className="min-h-screen relative flex flex-col items-center">
-      {/* Background Pattern */}
-      <div className="fixed inset-0 bg-grid -z-10 opacity-50 pointer-events-none" />
-      <div className="fixed inset-0 bg-gradient-to-tr from-zinc-900 via-zinc-900 to-emerald-800/20 -z-20 pointer-events-none" />
+    <div className="min-h-screen relative flex flex-col items-center overflow-x-hidden">
+      <AntigravityBackground />
+      {/* Background Pattern - Hidden on Home */}
+      {location.pathname !== '/' && (
+        <>
+          <div className="fixed inset-0 bg-grid -z-10 opacity-50 pointer-events-none" />
+          <div className="fixed inset-0 bg-gradient-to-tr from-zinc-900 via-zinc-900 to-emerald-800/20 -z-20 pointer-events-none" />
+        </>
+      )}
 
       {/* Floating Navigation */}
       <nav className="fixed top-6 z-50 px-4">
@@ -36,7 +42,7 @@ const Layout = ({ children }) => {
       </nav>
 
       {/* Main Content Area */}
-      <main className="w-full max-w-4xl px-6 pt-32 pb-20 flex-1 flex flex-col items-center">
+      <main className={`w-full flex-1 flex flex-col items-center ${location.pathname === '/' ? 'pt-32 pb-20 justify-center min-h-screen' : 'max-w-4xl px-6 pt-32 pb-20'}`}>
         <div className="w-full animate-slide-up">
           {children}
         </div>
