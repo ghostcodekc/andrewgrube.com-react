@@ -30,19 +30,16 @@ const AntigravityBackground = () => {
         window.addEventListener('resize', resize);
         resize();
 
-        // ----------------------------------------------------
-        // The DNA of the Nebula: April 15th, 2024 (4/15/2024)
-        // ----------------------------------------------------
-        const month = 4;
-        const day = 15;
-        const year = 2024;
+        // -----------------------------------------------------------------
+        // The DNA of the Nebula: In Loving Memory (08/08/2013 - 04/15/2024)
+        // -----------------------------------------------------------------
+        const birth = { m: 8, d: 8, y: 2013 };
+        const pass = { m: 4, d: 15, y: 2024 };
         
         // 1. Universal Seed:
-        // We use the date as the literal seed for the universe.
-        // This mathematically binds the visualization to the date, meaning the 
-        // unique shape, star positions, and dust properties will be the exact 
-        // same immutable configuration forever.
-        const cosmicSeed = parseInt(`${month}${day}${year}`); // 4152024
+        // We combine the birth and passing dates to form the unique cosmic seed.
+        // This makes the entire nebula's structure a unique timeline of a life.
+        const cosmicSeed = parseInt(`${birth.m}${birth.d}${birth.y}`) + parseInt(`${pass.m}${pass.d}${pass.y}`); 
         const random = PRNG(cosmicSeed);
 
         // Emerald & Zinc Palette matching the website's theme
@@ -51,12 +48,15 @@ const AntigravityBackground = () => {
         ];
 
         // 2. Cosmic Dust Density:
-        // Desktop renders exactly 415 particles (April 15th).
-        // Mobile uses the first half of 2024 (202 particles) to save GPU on weaker devices.
-        const numParticles = width > 768 ? parseInt(`${month}${day}`) : parseInt(year.toString().slice(0, 3)); // 415 or 202
+        // Desktop renders particles equal to the sum of both significant days (415 + 88 = 503).
+        // Mobile renders a focused subset (88 + 15 = 103) to maintain performance.
+        const numParticles = width > 768 ? (pass.m * 100 + pass.d) + (birth.m * 10 + birth.d) : (birth.m * 10 + birth.d) + pass.d; 
         const particles = [];
         
-        const maxDist = Math.max(width, height) * 0.85;
+        // Expansion: On mobile, we push the distance significantly beyond the screen 
+        // to avoid a "cramped" look, letting the nebula feel infinite.
+        const expansionFactor = width > 768 ? 0.85 : 1.5;
+        const maxDist = Math.max(width, height) * expansionFactor;
 
         for (let i = 0; i < numParticles; i++) {
             const randomU = random();
@@ -86,9 +86,8 @@ const AntigravityBackground = () => {
             ctx.globalCompositeOperation = 'screen';
 
             // 3. The Breathing Rate (Period):
-            // The time it takes for one full cosmic breath is exactamente Month * Day * Year in milliseconds.
-            // 4 * 15 * 2024 = 121,440 milliseconds (exactly 2.02 minutes).
-            const period = month * day * year; 
+            // The expansion cycle duration is derived from the span of a life.
+            const period = pass.m * pass.d * pass.y; 
             const progress = (elapsed % period) / period;
 
             // Rebounds back and forth endlessly between 35% and 75% marks
@@ -122,9 +121,7 @@ const AntigravityBackground = () => {
                 let alpha = 0.4 * (1 - easeT * 0.3); 
                 alpha *= (Math.sin(elapsed * 0.0008 + p.opacityOffset) * 0.5 + 0.5); 
                 
-                if (currentDist > maxDist * 0.7) {
-                   alpha *= Math.max(0, 1 - (currentDist - maxDist * 0.7) / (maxDist * 0.3));
-                }
+                // Boundaries removed to allow the nebula to bleed off-screen naturally
 
                 ctx.fillStyle = p.color;
                 ctx.globalAlpha = alpha;

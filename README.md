@@ -8,15 +8,15 @@
 
 ## The Nebula (Cosmic Background)
 
-The particle background driving the site's aesthetic via the `AntigravityBackground` component is not just an arbitrary noise field. The entire physics simulation is mathematically entwined with a highly significant date: **April 15th, 2024 (4/15/2024)**. 
+The particle background driving the site's aesthetic via the `AntigravityBackground` component is a mathematical tribute to a significant life. The entire physics simulation is entwined with the birth and passing dates: **August 8th, 2013 (08/08/2013)** and **April 15th, 2024 (04/15/2024)**.
 
 Every aspect of the visual is tied to these numbers:
 
 1. **The Shape (Universal Seed)**
-   The exact starting angle, distance spread, glow properties, and speed curves of the particles aren't genuinely random at all. The physics engine utilizes a deterministic Pseudo-Random Number Generator instantiated with the literal integer `4152024` as its universal seed. This mathematical fingerprint means the unique cloud configuration you see is an immutable signature tied specifically to that date.
+   The unique layout and properties of the nebula aren't random. The physics engine uses a deterministic seed created by combining both dates (`8082013 + 4152024`). This mathematical fingerprint means the specific formation of this cosmic cloud is an immutable signature of that life span.
    
 2. **The Density (Particle Count)**
-   The number of glowing cosmic dust particles rendered on the screen is dictated strictly by the date. Desktop browsers will render `415` particles, while mobile browsers use the first half of the year, rendering exactly `202` particles. 
+   The quantity of glowing cosmic dust particles is derived directly from the timeline. Desktop browsers render exactly `503` particles (the sum of the birthday `88` and the passing day `415`). Mobile browsers render a focused cluster of `103` particles to ensure smooth performance while maintaining the symbolic density.
 
 3. **The Life Cycle (Breathing Rhythm)**
-   The nebula bounces smoothly in a continuous fluid expansion-contraction cycle. The duration of this "breathing" loop isn't a random aesthetic string, but perfectly calculated as exactly `Month * Day * Year` in milliseconds `(4 * 15 * 2024) = 121,440ms`. This creates a deeply soothing ~2.02 minute cosmic respiration loop.
+   The nebula bounces in a fluid expansion-contraction cycle. This rhythm is calculated using the passing date's components `(4 * 15 * 2024) = 121,440ms`, creating a soothing ~2.02 minute cycle. On mobile, the expansion is set to push beyond the screen boundaries, removing constraints and allowing the nebula to feel infinite.
