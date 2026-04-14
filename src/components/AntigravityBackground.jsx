@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
+// A deterministic Pseudo-Random Number Generator (PRNG) 
 function PRNG(seed) {
     let t = seed;
     return function() {
@@ -9,27 +10,6 @@ function PRNG(seed) {
     }
 }
 
-function hash(t) {
-    let a = 43758.5453123 * Math.sin(t);
-    return a - Math.floor(a);
-}
-
-const getBezierValue = (t, a, r, e, n) => {
-    const i = 1 - t, s = t * t, o = i * i;
-    return o * i * a + 3 * o * t * r + 3 * i * s * e + s * t * n;
-};
-
-const solveBezierX = (t, a, r) => {
-    let e = t;
-    for (let n = 0; n < 8; n++) {
-        const val = getBezierValue(e, 0, a, r, 1);
-        const diff = (getBezierValue(e + .001, 0, a, r, 1) - val) / .001;
-        if (diff === 0) break;
-        e -= (val - t) / diff;
-    }
-    return Math.max(0, Math.min(1, e));
-};
-
 const AntigravityBackground = () => {
     const canvasRef = useRef(null);
 
@@ -38,103 +18,126 @@ const AntigravityBackground = () => {
         if (!canvas) return;
         const ctx = canvas.getContext('2d', { alpha: true });
         
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+
         const resize = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
         };
         window.addEventListener('resize', resize);
         resize();
 
-        const prng = PRNG(0);
-        const randomInt = (t, a) => Math.floor(prng() * (a - t + 1)) + t;
-        const randomFloat = (t, a) => t + prng() * (a - t);
+        // ----------------------------------------------------
+        // The DNA of the Nebula: April 15th, 2024 (4/15/2024)
+        // ----------------------------------------------------
+        const month = 4;
+        const day = 15;
+        const year = 2024;
+        
+        // 1. Universal Seed:
+        // We use the date as the literal seed for the universe.
+        // This mathematically binds the visualization to the date, meaning the 
+        // unique shape, star positions, and dust properties will be the exact 
+        // same immutable configuration forever.
+        const cosmicSeed = parseInt(`${month}${day}${year}`); // 4152024
+        const random = PRNG(cosmicSeed);
 
-        const M = randomInt(2, 8);
-        const I = randomInt(1, 2);
-        const S = hash(10) > .5 ? 1 : -1;
-        const z = randomInt(2, 9);
-        const x_mul = -S;
-        const P_val = randomFloat(.2, .8);
-        const V = randomInt(8, 20);
-
-        const floatKeyframes = [
-            { p: 0, x: 40, y: 40 },
-            { p: 0.3333, x: 60, y: 45 },
-            { p: 0.6666, x: 50, y: 60 },
-            { p: 1, x: 40, y: 40 }
+        // Emerald & Zinc Palette matching the website's theme
+        const palette = [
+            '#10b981', '#34d399', '#059669', '#06b6d4', '#6ee7b7', '#e4e4e7'
         ];
+
+        // 2. Cosmic Dust Density:
+        // Desktop renders exactly 415 particles (April 15th).
+        // Mobile uses the first half of 2024 (202 particles) to save GPU on weaker devices.
+        const numParticles = width > 768 ? parseInt(`${month}${day}`) : parseInt(year.toString().slice(0, 3)); // 415 or 202
+        const particles = [];
+        
+        const maxDist = Math.max(width, height) * 0.85;
+
+        for (let i = 0; i < numParticles; i++) {
+            const randomU = random();
+            const randomV = random();
+            // Gaussian math using the seeded PRNG
+            const r = Math.sqrt(-2.0 * Math.log(randomU)) * Math.cos(2.0 * Math.PI * randomV);
+            
+            particles.push({
+                angle: random() * Math.PI * 2,
+                distBase: random() * 20, 
+                radiusSpread: Math.abs(r) * maxDist * 0.45, 
+                size: random() * 1.5 + 0.5, 
+                color: palette[Math.floor(random() * palette.length)],
+                angleSpeed: (random() - 0.5) * 0.0003, 
+                opacityOffset: random() * Math.PI * 2,
+                sizeGlow: random() > 0.9 
+            });
+        }
 
         let reqId;
         const startTime = performance.now();
-        const w = .42, B = 0, y = .58, v = 1; 
 
         const draw = (t) => {
             const elapsed = t - startTime;
             
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, width, height);
+            ctx.globalCompositeOperation = 'screen';
+
+            // 3. The Breathing Rate (Period):
+            // The time it takes for one full cosmic breath is exactamente Month * Day * Year in milliseconds.
+            // 4 * 15 * 2024 = 121,440 milliseconds (exactly 2.02 minutes).
+            const period = month * day * year; 
+            const progress = (elapsed % period) / period;
             
-            const n = 120 + 20 * (0.5 - 0.5 * Math.cos(elapsed * Math.PI * 2 / 120000));
-            const i_val = 600;
-            const c = 22;
-            const l = 44;
-            const m = 2;
-            const d = 0.1;
-            const u = 0.6;
-            const h = "rgba(16, 185, 129, 0.25)"; 
+            const easeT = 0.5 + 0.25 * Math.sin(progress * Math.PI * 2 - Math.PI / 2);
 
-            const floatElapsed = (elapsed % 60000) / 60000;
-            let startK = floatKeyframes[0], endK = floatKeyframes[1];
-            for (let i = 0; i < floatKeyframes.length - 1; i++) {
-                if (floatElapsed >= floatKeyframes[i].p && floatElapsed <= floatKeyframes[i+1].p) {
-                    startK = floatKeyframes[i];
-                    endK = floatKeyframes[i+1];
-                    break;
-                }
-            }
+            const centerX = width / 2;
+            const centerY = height / 2;
+
+            // Faint emerald core glow
+            const coreRadius = 30 + 200 * easeT;
+            const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, coreRadius);
+            gradient.addColorStop(0, `rgba(16, 185, 129, ${0.1 * (1 - easeT * 0.6)})`); 
+            gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
             
-            let lp = (floatElapsed - startK.p) / (endK.p - startK.p);
-            lp = lp * lp * (3 - 2 * lp); 
-            const ringX = startK.x + (endK.x - startK.x) * lp;
-            const ringY = startK.y + (endK.y - startK.y) * lp;
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, coreRadius, 0, Math.PI * 2);
+            ctx.fill();
 
-            const g = (elapsed / 1000) * (100 / 180);
-
-            const k = canvas.width * ringX / 100;
-            const b = canvas.height * ringY / 100;
-            const C = g * Math.PI * 2;
-            const R = n + i_val;
-            const U = i_val / 2;
-
-            ctx.fillStyle = h;
-
-            for (let t_row = 0; t_row < c; t_row++) {
-                const r = n + (c > 1 ? t_row / (c - 1) : 0) * i_val;
-                for (let e = 0; e < l; e++) {
-                    const currentAngle = (e / l) * Math.PI * 2;
-                    const wave = Math.sin(currentAngle * M + C * I * S) + Math.sin(currentAngle * z + C * x_mul) + Math.sin(t_row * P_val + C);
-                    
-                    let alphaWave = (wave + 3) / 6;
-                    alphaWave = Math.pow(Math.max(0, alphaWave), 1.5);
-                    let currentAlpha = d + alphaWave * (u - d);
-
-                    const dist = r + wave * V;
-                    const px = k + Math.cos(currentAngle) * dist;
-                    const py = b + Math.sin(currentAngle) * dist;
-
-                    let fVal = Math.min(dist - n, R - dist) / U;
-                    fVal = Math.max(0, Math.min(1, fVal));
-
-                    const F = solveBezierX(fVal, w, y);
-                    currentAlpha *= getBezierValue(F, 0, B, v, 1);
-                    currentAlpha = Math.max(0, Math.min(1, currentAlpha));
-
-                    if (currentAlpha > .01) {
-                        ctx.globalAlpha = currentAlpha;
-                        ctx.beginPath();
-                        ctx.arc(px, py, m, 0, 2 * Math.PI);
-                        ctx.fill();
-                    }
+            // Render particles
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                
+                const currentAngle = p.angle + elapsed * p.angleSpeed * (1 + easeT * 0.5); 
+                const currentDist = p.distBase + p.radiusSpread * easeT;
+                
+                const x = centerX + Math.cos(currentAngle) * currentDist;
+                const y = centerY + Math.sin(currentAngle) * currentDist;
+                
+                let alpha = 0.4 * (1 - easeT * 0.3); 
+                alpha *= (Math.sin(elapsed * 0.0008 + p.opacityOffset) * 0.5 + 0.5); 
+                
+                if (currentDist > maxDist * 0.7) {
+                   alpha *= Math.max(0, 1 - (currentDist - maxDist * 0.7) / (maxDist * 0.3));
                 }
+
+                ctx.fillStyle = p.color;
+                ctx.globalAlpha = alpha;
+                
+                const currentSize = p.size * (1 + easeT * 0.2);
+
+                if (p.sizeGlow) {
+                    ctx.beginPath();
+                    ctx.arc(x, y, currentSize * 3.5, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                ctx.beginPath();
+                ctx.arc(x, y, currentSize, 0, Math.PI * 2);
+                ctx.fill();
             }
 
             reqId = requestAnimationFrame(draw);
@@ -152,7 +155,6 @@ const AntigravityBackground = () => {
         <canvas 
             ref={canvasRef}
             className="fixed inset-0 w-full h-full -z-30 pointer-events-none"
-            style={{ display: 'block' }}
         />
     );
 };
