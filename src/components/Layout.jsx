@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen relative flex flex-col items-center overflow-x-hidden">
-      <AntigravityBackground />
+      {location.pathname === '/' && <AntigravityBackground />}
       {/* Background Pattern - Hidden on Home */}
       {location.pathname !== '/' && (
         <>

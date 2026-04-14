@@ -90,8 +90,10 @@ const AntigravityBackground = () => {
             // 4 * 15 * 2024 = 121,440 milliseconds (exactly 2.02 minutes).
             const period = month * day * year; 
             const progress = (elapsed % period) / period;
-            
-            const easeT = 0.5 + 0.25 * Math.sin(progress * Math.PI * 2 - Math.PI / 2);
+
+            // Rebounds back and forth endlessly between 35% and 75% marks
+            // (Shortened by ~20% from the 'beginning' collapse point)
+            const easeT = 0.55 + 0.2 * Math.sin(progress * Math.PI * 2 - Math.PI / 2);
 
             const centerX = width / 2;
             const centerY = height / 2;
