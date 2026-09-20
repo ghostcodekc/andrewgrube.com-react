@@ -18,20 +18,34 @@
   "resume": [
     {
       "id": 1,
-      "role": "Senior SRE",
+      "role": "Senior Site Reliability Engineer",
       "company": "Shamrock Trading Corporation",
-      "period": "2021 - Present",
-      "description": "Led cross-functional SRE initiatives including a comprehensive monitoring overhaul and a high-scale S3 cross-region replication project for disaster recovery. Delivered substantial cost savings by migrating legacy hosting services to internal serverless solutions and accelerated development cycles by implementing standardized EventBridge and containerized Lambda deployment patterns."
+      "period": "2025 - Present",
+      "description": "Promoted to Senior SRE, leading cross-functional SRE initiatives including a comprehensive monitoring overhaul and a high-scale S3 cross-region replication project for disaster recovery. Delivered substantial cost savings by migrating legacy hosting services to internal serverless solutions and accelerated development cycles by implementing standardized EventBridge and containerized Lambda deployment patterns."
     },
     {
       "id": 2,
+      "role": "Site Reliability Engineer II",
+      "company": "Shamrock Trading Corporation",
+      "period": "2022 - 2025",
+      "description": "Expanded ownership of reliability initiatives, driving monitoring improvements and disaster recovery work including high-scale S3 cross-region replication. Migrated legacy hosting services to internal serverless solutions and implemented standardized EventBridge and containerized Lambda deployment patterns to accelerate development."
+    },
+    {
+      "id": 3,
+      "role": "Site Reliability Engineer",
+      "company": "Shamrock Trading Corporation",
+      "period": "2021 - 2022",
+      "description": "Joined Shamrock focused on reliability, monitoring, and AWS infrastructure, contributing to disaster recovery efforts and serverless/containerization initiatives that improved cost efficiency and development velocity."
+    },
+    {
+      "id": 4,
       "role": "DevOps Engineer II",
       "company": "SelectQuote",
       "period": "2021 - 2021",
       "description": "Engineered scalable Infrastructure as Code (IaC) solutions using Terraform to establish a robust Disaster Recovery environment with automated documentation. Developed custom serverless tooling in Python to integrate AWS QuickSight with Google SSO and orchestrated complex Bitbucket CI/CD pipelines for Lambda functions requiring native dependency management."
     },
     {
-      "id": 3,
+      "id": 5,
       "role": "DevOps Engineer",
       "company": "Data Systems International Inc.",
       "period": "2014 - 2021",
